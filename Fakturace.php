@@ -3,7 +3,7 @@
 Plugin Name: Fakturace
 Plugin URI: http://jancejka.cz/plugin-fakturace-pro-wordpress/
 Description: Vystavování faktur, platby přes GoPay, následná aktivace účtů a přiřazování uživatelských rolí.
-Version: 1.2
+Version: 1.2.1
 Author: Jan Čejka
 Author URI: http://jancejka.cz
 Author Email: posta@jancejka.cz
@@ -29,7 +29,8 @@ License:
 include_once( 'dbStructUpdate.php' );
 require_once( 'Faktura.php' ); 
 
-require_once( 'titan-framework-checker.php' );
+//require_once( 'titan-framework-checker.php' );
+require_once( 'installDependencies.php' );
 
 class Fakturace {
 
@@ -59,7 +60,7 @@ class Fakturace {
         
         $this->notify_url = home_url() . '/?akce_fakturace=gopay-notify';
         $this->fakturaModel = new Faktura($wpdb->prefix . "mw_faktury");
-        
+
         //register an activation hook for the plugin
         register_activation_hook( __FILE__, array( &$this, 'install_fakturace' ) );
         
@@ -68,7 +69,7 @@ class Fakturace {
         //Hook up to the init action
         add_action( 'init', array( &$this, 'init_fakturace' ) );
         add_action( 'admin_init', array( &$this, 'admin_init' ) );
-        add_action( 'admin_menu', array( &$this, 'add_menu') );
+//        add_action( 'admin_menu', array( &$this, 'add_menu') );
         
         add_action( 'admin_menu', array($this, 'add_menu_list_table_page' ));
         

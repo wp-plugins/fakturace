@@ -25,6 +25,8 @@ Plugin je prozatím určen pro ČR
 4. na zvolenou stránku přidat platební formulář pomocí shortcode `[fakturace_formular]`
 5. předat pracovníkům firmy GoPay notifikační URL, které naleznete v nastavení pluginu pod záložkou **GoPay**
 
+Pro správnou funkčnost je vyžadována instalace pluginu <a href="https://wordpress.org/plugins/titan-framework/">Titan Framework</a>.
+
 == Screenshots ==
 
 1. Seznam vystavených faktur
@@ -46,3 +48,7 @@ Plugin je prozatím určen pro ČR
 
 * přidána podpora provizního systému AffilBox
 * odstraněn soubor nette.phar a přidány používané knihovny přes composer
+
+= 1.2.1 =
+
+* změněn způsob instalace potřebných závislostí
