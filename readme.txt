@@ -26,6 +26,7 @@ Plugin je prozatím určen pro ČR
 5. předat pracovníkům firmy GoPay notifikační URL, které naleznete v nastavení pluginu pod záložkou **GoPay**
 
 Pro správnou funkčnost je vyžadována instalace pluginu <a href="https://wordpress.org/plugins/titan-framework/">Titan Framework</a>.
+Pro vytvoření nové uživatelské role doporučuji třeba plugin <a href="https://wordpress.org/plugins/members/">Members</a>.
 
 == Screenshots ==
 
@@ -52,3 +53,8 @@ Pro správnou funkčnost je vyžadována instalace pluginu <a href="https://word
 = 1.2.1 =
 
 * změněn způsob instalace potřebných závislostí
+
+= 1.2.2 =
+
+* upraveno upozornění na potřebu instalace potřebných závislostí (nejde skrýt)
+* přidáno doporučení pluginu <a href="https://wordpress.org/plugins/members/">Members</a>

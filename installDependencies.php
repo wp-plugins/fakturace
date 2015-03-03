@@ -34,6 +34,11 @@ function fakturace_required_plugins() {
             'slug'      => 'titan-framework',
             'required'  => true,
         ),
+        array(
+            'name'      => 'Members',
+            'slug'      => 'members',
+            'required'  => false,
+        ),
 
     );
 
