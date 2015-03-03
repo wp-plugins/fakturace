@@ -3,7 +3,7 @@
 Plugin Name: Fakturace
 Plugin URI: http://jancejka.cz/plugin-fakturace-pro-wordpress/
 Description: Vystavování faktur, platby přes GoPay, následná aktivace účtů a přiřazování uživatelských rolí.
-Version: 1.2.2
+Version: 1.2.3
 Author: Jan Čejka
 Author URI: http://jancejka.cz
 Author Email: posta@jancejka.cz
@@ -560,7 +560,7 @@ class Fakturace {
 
 	    $tab_affilbox = $panel->createTab( array(
 		    'name' => 'AffilBox',
-		    'desc' => 'Nastavení propojení s <a href="http://www.affilbox.cz/?a_box=jmweajqf">AffilBoxem</a>'
+		    'desc' => 'Nastavení propojení s <a href="http://www.affilbox.cz/?a_box=jmweajqf" target="_blank">AffilBoxem</a>'
 	    ) );
 
 	    // -----

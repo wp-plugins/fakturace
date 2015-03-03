@@ -58,3 +58,7 @@ Pro vytvoření nové uživatelské role doporučuji třeba plugin <a href="http
 
 * upraveno upozornění na potřebu instalace potřebných závislostí (nejde skrýt)
 * přidáno doporučení pluginu <a href="https://wordpress.org/plugins/members/">Members</a>
+
+= 1.2.3 =
+
+* upravena aktivace účtu - pro administrátory se uživ. role nemění

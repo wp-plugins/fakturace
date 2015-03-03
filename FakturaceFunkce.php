@@ -38,8 +38,10 @@ class FakturaceFunkce {
 
             // ROLES
 
-            wp_update_user(array('ID' => $user->ID, 'role' => $role));
-            do_action('profile_update');
+            if( !user_can( $user->ID, 'administrator' ) ) {
+                wp_update_user(array('ID' => $user->ID, 'role' => $role));
+                do_action('profile_update');
+            }
 
         }
 
