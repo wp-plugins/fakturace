@@ -1,6 +1,6 @@
 === Fakturace ===
 Contributors: tanciciorel
-Tags: fakturce, platby
+Tags: fakturce, platby, gopay
 Donate link: https://flattr.com/profile/tancici-orel
 Requires at least: 4.1.1
 Tested up to: 4.1.1
