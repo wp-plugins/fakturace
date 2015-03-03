@@ -10,7 +10,13 @@ License: GPLv2
 Fakturace, platby přes GoPay, aktivace prémiových účtů
 
 == Description ==
-Generování a zasílání faktur emailem (pro ČR), online platby přes GoPay a následná aktivace prémiových uživatelských účtů.
+Fakturace a online platební brána s aktivací prémiových účtů
+
+* generování a zasílání faktur v PDF emailem
+* online platby přes GoPay
+* následná aktivace prémiových uživatelských účtů
+
+Plugin je prozatím určen pro ČR
 
 == Installation ==
 1. nainstalovat plugin
