@@ -213,9 +213,7 @@ class Fakturace {
 
         $tab_info->createOption( array(
             'type' => 'note',
-            'desc' => "<p>Plugin prozatím není zařazen v repozitáři WordPressu, takže v jeho případě nefunguje ani automatická aktualizace na novější verze.</p>"
-            . "<p>Aktuální verzi můžete nalézt na <a href=\"http://jancejka.cz/plugin-fakturace-pro-wordpress/\" target=\"_blank\">stránce s pluginem, tak se na ní občas podívejte</a>.</p>"
-            . "<p>Na stránce s pluginem se také můžete přihlásit k odběru zpráv o aktualizacích, takže novou verzi získáte hned mezi prvními.</p>"
+            'desc' => '<p>Na <a href="http://jancejka.cz/plugin-fakturace-pro-wordpress/" target="_blank">stránce s pluginem</a> se můžete přihlásit k odběru zpráv o aktualizacích, takže hned mezi prvními získáte různá zajímavá upozornění a zákulisní informace.</p>'
 //            . "<h3>Přihlašte se k odběru novinek o pluginu</h3>"
 //            . "<p>Pokud do tohoto rámečku zadáte svou emailovou adresu a stisknete přihlašovací tlačítko, informace o nové verzi Vám přijdou emailem.</p>"
 //            . '<p><script type="text/javascript"> //<![CDATA[ if (typeof newsletter_check !== "function") { window.newsletter_check = function (f) { var re = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-]{1,})+\.)+([a-zA-Z0-9]{2,})+$/; if (!re.test(f.elements["ne"].value)) { alert("Emailová adresa není v pořádku"); return false; } return true; } } function prihlasit() { document.getElementById("plugin_aktualizace").submit(); } //]]> </script> <div class="newsletter newsletter-subscription"> <form method="post" action="http://jancejka.cz/wp-content/plugins/newsletter/do/subscribe.php" target="_blank" onsubmit="return newsletter_check(this)" name="plugin_aktualizace" id="plugin_aktualizace"> <!-- email --> Email <input class="newsletter-email" type="email" name="ne" size="30" required><input type="hidden" name="nl[]" value="9"><br /><br /><button class="button button-primary" onclick="prihlasit()">Přihlásit k odběru novinek o pluginu</button> </form> </div></p>'
