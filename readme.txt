@@ -68,3 +68,7 @@ Pro vytvoření nové uživatelské role doporučuji třeba plugin <a href="http
 * vylepšeno generování faktury (jméno a příjmení zákazníka, pokud není jméno firmy)
 * informace o dříve vytvořeném přístupu v emailu, pokud zákazník již má účet
 * informace o rozšířené verzi pluginu na stránce s informacemi
+
+= 1.2.5 =
+
+* opravena komunikace s GoPay v provozním režimu
