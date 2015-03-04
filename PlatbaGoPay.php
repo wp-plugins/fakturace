@@ -111,7 +111,7 @@ class PlatbaGoPay {
         if( $faktura ) {
             $goid           = $titan->getOption( 'gopay-goid' );
             $seckey         = $titan->getOption( 'gopay-seckey' );
-            $testgate       = $titan->getOption( 'gopay-test' );
+            $testGate       = $titan->getOption( 'gopay-test' );
             $nazev_produktu = $titan->getOption( 'fakt-produkt-nazev' );
             $mena           = 'CZK';
 
@@ -120,6 +120,10 @@ class PlatbaGoPay {
              */
             try {
 
+                $go_config = new \GopayConfig();
+                $go_config->init( $testGate ? \GopayConfig::TEST : \GopayConfig::PROD );
+                $go_client = new \SoapClient( \GopayConfig::ws(), array() );
+            
                 \GopayHelper::checkPaymentIdentity(
                             (float)$paymentGoId,
                             (float)$paymentSessionId,
