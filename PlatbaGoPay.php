@@ -174,9 +174,13 @@ class PlatbaGoPay {
 //                                }
 //                            }
 
+                            $odberatel = unserialize( $faktura->odberatel );
+                            
                             $replaces['password'] = FakturaceFunkce::activateUser(
                                     $faktura->uzivatel_email, 
-                                    $titan->getOption( 'user-activate-role' )
+                                    $titan->getOption( 'user-activate-role' ),
+                                    $odberatel['firstName'],
+                                    $odberatel['lastName']
                                     );
 
                             self::sendEmail($faktura->uzivatel_email, 'pay', $replaces);

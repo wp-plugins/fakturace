@@ -313,7 +313,9 @@ class Faktura {
         $template->supplierTin = $dodavatel['DIC'];
         $template->supplierAccountNumber = $dodavatel['ucet'];
         
-        $template->customerName = $odberatel['nazev'];
+        $template->customerName = ( !empty($odberatel['nazev'])
+                ? $odberatel['nazev'] 
+                : $odberatel['firstName'] . ' ' . $odberatel['lastName'] );
         $template->customerStreet = $odberatel['street'];
         $template->customerCity = $odberatel['city'];
         $template->customerZip = $odberatel['postalCode'];

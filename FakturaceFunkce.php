@@ -17,14 +17,11 @@ class FakturaceFunkce {
         // USER 
 
         $email = strtolower($email);
-        $password = '';
         
         $user = get_user_by('email', $email);
         
         if ($user === FALSE) {
-            if (empty($password))
-                $password = wp_generate_password($length = 12, $include_standard_special_chars = false);
-
+            $password = wp_generate_password($length = 12, $include_standard_special_chars = false);
             $user_id = wp_create_user($email, $password, $email);
 
             update_user_meta($user_id, "user_first_name", $firstName);
@@ -43,6 +40,8 @@ class FakturaceFunkce {
                 do_action('profile_update');
             }
 
+        } else {
+            $password = "<i>(již bylo zasláno dříve)</i>";
         }
 
         return $password;

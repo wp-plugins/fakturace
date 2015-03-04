@@ -62,3 +62,9 @@ Pro vytvoření nové uživatelské role doporučuji třeba plugin <a href="http
 = 1.2.3 =
 
 * upravena aktivace účtu - pro administrátory se uživ. role nemění
+
+= 1.2.4 =
+
+* vylepšeno generování faktury (jméno a příjmení zákazníka, pokud není jméno firmy)
+* informace o dříve vytvořeném přístupu v emailu, pokud zákazník již má účet
+* informace o rozšířené verzi pluginu na stránce s informacemi
