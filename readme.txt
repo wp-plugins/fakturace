@@ -42,7 +42,7 @@ Pro vytvoření nové uživatelské role doporučuji třeba plugin <a href="http
 
 = Chyba po instalaci =
 
-Po aktivaci souvisejícího pluginu **Titan framework** se zobrazuje chyba `**Fatal error:** Cannot redeclare class scss_formatter_nested in ...`
+Po aktivaci souvisejícího pluginu **Titan framework** se zobrazuje chyba `Fatal error: Cannot redeclare class scss_formatter_nested in ...`
 
 K tomu může dojít, pokud některý z dalších pluginů na webu používá **Titan framework** jako vloženou knihovnu (součást kódu).
 Tím dochází k duplikaci kódu, což je chyba.
