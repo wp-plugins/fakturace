@@ -9,6 +9,7 @@ License: GPLv2
 
 Fakturace, platby přes GoPay, aktivace prémiových účtů
 
+
 == Description ==
 Fakturace a online platební brána s aktivací prémiových účtů
 
@@ -17,6 +18,7 @@ Fakturace a online platební brána s aktivací prémiových účtů
 * následná aktivace prémiových uživatelských účtů
 
 Plugin je prozatím určen pro ČR
+
 
 == Installation ==
 1. nainstalovat plugin
@@ -28,11 +30,26 @@ Plugin je prozatím určen pro ČR
 Pro správnou funkčnost je vyžadována instalace pluginu <a href="https://wordpress.org/plugins/titan-framework/">Titan Framework</a>.
 Pro vytvoření nové uživatelské role doporučuji třeba plugin <a href="https://wordpress.org/plugins/members/">Members</a>.
 
+
 == Screenshots ==
 
 1. Seznam vystavených faktur
 2. Nastavení pluginu
 3. Ukázka platebního formuláře
+
+
+== Frequently Asked Questions ==
+
+= Chyba po instalaci =
+
+Po aktivaci souvisejícího pluginu **Titan framework** se zobrazuje chyba `**Fatal error:** Cannot redeclare class scss_formatter_nested in ...`
+
+K tomu může dojít, pokud některý z dalších pluginů na webu používá **Titan framework** jako vloženou knihovnu (součást kódu).
+Tím dochází k duplikaci kódu, což je chyba.
+
+Zkuste na serveru vyhledat, který plugin obsahuje soubor `class-titan-framework.php`.
+Samozřejmě mimo adresáře `titan-framework`, což je přímo adresář **Titan frameworku**.
+
 
 == Changelog ==
 
