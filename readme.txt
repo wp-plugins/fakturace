@@ -2,7 +2,7 @@
 Contributors: tanciciorel
 Tags: fakturce, platby, gopay
 Donate link: https://flattr.com/profile/tancici-orel
-Requires at least: 4.1.1
+Requires at least: 3.9.2
 Tested up to: 4.1.1
 Stable tag: trunk
 License: GPLv2

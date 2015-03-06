@@ -29,7 +29,6 @@ License:
 include_once( 'dbStructUpdate.php' );
 require_once( 'Faktura.php' ); 
 
-//require_once( 'titan-framework-checker.php' );
 require_once( 'installDependencies.php' );
 
 class Fakturace {
@@ -166,8 +165,8 @@ class Fakturace {
 
         $tab_info->createOption( array(
             'type' => 'note',
-            'desc' => "<p>Generovat a zasílat faktury emailem, umožnit online platby přes GoPay a následně aktivovat uživatelské účty a nastavit jim vybranou uživatelskou roli.</p>"
-            . "<p>V základní verzi umí plugin obsluhovat jeden formulář s jedním produktem. Pokud potřebujete víc, přečtěte si o rozšířené verzi <a href=\"http://jancejka.cz/plugin-fakturace-premium/\" target=\"_blank\">Fakturace PREMIUM</a>.<p>"
+            'desc' => "<p>Generovat a zasílat <b>faktury</b> emailem, umožnit <b>online platby</b> přes GoPay a následně <b>aktivovat uživatelské účty</b> a nastavit jim vybranou uživatelskou roli.</p>"
+            . "<p>V základní verzi umí plugin obsluhovat jeden formulář s jedním produktem. Pokud potřebujete víc, <b>přečtěte si o rozšířené verzi <a href=\"http://jancejka.cz/plugin-fakturace-premium/\" target=\"_blank\">Fakturace PREMIUM</a></b>.<p>"
         ) );
             
         // -----
@@ -179,7 +178,7 @@ class Fakturace {
 
         $tab_info->createOption( array(
             'type' => 'note',
-            'desc' => "<p><div style=\"float: left; margin-right: 2em\"><img src=\"" . plugins_url( 'assets/author.jpg', __FILE__ ) . "\" /></div>Jan Čejka</p><p><a href=\"http://jancejka.cz\" target=\"blank\">jancejka.cz</a></p><div style=\"clear: both;\"></div>"
+            'desc' => "<p><div style=\"float: left; margin-right: 2em\"><img src=\"" . plugins_url( 'assets/author.jpg', __FILE__ ) . "\" /></div>Jan Čejka</p><p><em>čarotvůrce - otec tří dětí, čaroděj, šaman, terapeut, fotograf, designer, malíř a webový architekt</em></p><p><a href=\"http://jancejka.cz\" target=\"_blank\">jancejka.cz</a></p><div style=\"clear: both;\"></div>"
         ) );
             
         // -----
@@ -203,24 +202,14 @@ class Fakturace {
 
         $tab_info->createOption( array(
             'type' => 'note',
-            'desc' => "<p>Tato verze pluginu je poskytována zdarma bez nároku na odměnu.</p><p>Pokud Vám udělala radost, ušetřila peníze a chcete mě <strong>motivovat v jejím vylepšování</strong>, pošlete mi dárek dle svého uvážení na účet č. <span style=\"color: #008000;\"><strong>670100-2200018458/6210</strong></span> u mBank.</p><p>Pokud do poznámky připíšete své jméno, nebo název firmy, zveřejním ho i se zaslanou částkou v seznamu podporovatelů.</p>"
+            'desc' => "<p>" .
+                        "<div style=\"float: right; margin-left: 2em;\"><script id='fb2orrt'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=Tancici-Orel&url=http%3A%2F%2Fjancejka.cz%2Fplugin-fakturace-pro-wordpress%2F&title=WP+plugin+Fakturace';f.title='Flattr';f.height=62;f.width=55;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fb2orrt');</script></div>" .
+						"Tato verze pluginu je poskytována zdarma bez nároku na odměnu.</p><p>Pokud Vám udělala radost, ušetřila peníze a chcete mě <strong>motivovat v jejím vylepšování</strong>, pošlete mi dárek dle svého uvážení na účet č. <span style=\"color: #008000;\"><strong>670100-2200018458/6210</strong></span> u mBank.</p><p>Pokud do poznámky připíšete své jméno, nebo název firmy, zveřejním ho i se zaslanou částkou v seznamu podporovatelů.<br />" .
+						"Nebo přes službu <b>Flattr</b> tlačítkem vpravo." .
+						"<div style=\"float: none; clear: both;\"></div>" .
+						"</p>"
         ) );
 
-        // -----
-        
-        $tab_info->createOption( array(
-            'name' => 'Aktualizace',
-            'type' => 'heading',
-        ) );
-
-        $tab_info->createOption( array(
-            'type' => 'note',
-            'desc' => '<p>Na <a href="http://jancejka.cz/plugin-fakturace-pro-wordpress/" target="_blank">stránce s pluginem</a> se můžete přihlásit k odběru zpráv o aktualizacích, takže hned mezi prvními získáte různá zajímavá upozornění a zákulisní informace.</p>'
-//            . "<h3>Přihlašte se k odběru novinek o pluginu</h3>"
-//            . "<p>Pokud do tohoto rámečku zadáte svou emailovou adresu a stisknete přihlašovací tlačítko, informace o nové verzi Vám přijdou emailem.</p>"
-//            . '<p><script type="text/javascript"> //<![CDATA[ if (typeof newsletter_check !== "function") { window.newsletter_check = function (f) { var re = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-]{1,})+\.)+([a-zA-Z0-9]{2,})+$/; if (!re.test(f.elements["ne"].value)) { alert("Emailová adresa není v pořádku"); return false; } return true; } } function prihlasit() { document.getElementById("plugin_aktualizace").submit(); } //]]> </script> <div class="newsletter newsletter-subscription"> <form method="post" action="http://jancejka.cz/wp-content/plugins/newsletter/do/subscribe.php" target="_blank" onsubmit="return newsletter_check(this)" name="plugin_aktualizace" id="plugin_aktualizace"> <!-- email --> Email <input class="newsletter-email" type="email" name="ne" size="30" required><input type="hidden" name="nl[]" value="9"><br /><br /><button class="button button-primary" onclick="prihlasit()">Přihlásit k odběru novinek o pluginu</button> </form> </div></p>'
-        ) );
-            
         // =====
         
         $tab_gopay = $panel->createTab( array(
