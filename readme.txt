@@ -42,13 +42,20 @@ Pro vytvoření nové uživatelské role doporučuji třeba plugin <a href="http
 
 = Chyba po instalaci =
 
-Po aktivaci souvisejícího pluginu **Titan framework** se zobrazuje chyba `Fatal error: Cannot redeclare class scss_formatter_nested in ...`
+Po aktivaci souvisejícího pluginu **Titan framework** se zobrazuje chyba:
+
+`Fatal error: Cannot redeclare class scss_formatter_nested in ...`
 
 K tomu může dojít, pokud některý z dalších pluginů na webu používá **Titan framework** jako vloženou knihovnu (součást kódu).
 Tím dochází k duplikaci kódu, což je chyba.
 
 Zkuste na serveru vyhledat, který plugin obsahuje soubor `class-titan-framework.php`.
 Samozřejmě mimo adresáře `titan-framework`, což je přímo adresář **Titan frameworku**.
+
+Pokud se Vám zobrazují zprávy **Warning:** a v cestě souboru je **/nette/**, jsou to pouze upozornění na to, co by se mělo v externí knihovně **Nette** doladit.
+Nejedná se o chybu pluginu.
+
+Stačí <a href="http://codex.wordpress.org/Debugging_in_WordPress" target="_blank">vypnout ladící režim</a> WordPressu, což by na webových stránkách měl být výchozí stav.
 
 
 == Changelog ==
