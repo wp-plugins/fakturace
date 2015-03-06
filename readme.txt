@@ -72,3 +72,7 @@ Pro vytvoření nové uživatelské role doporučuji třeba plugin <a href="http
 = 1.2.5 =
 
 * opravena komunikace s GoPay v provozním režimu
+
+= 1.2.6 =
+
+* upraveny informace v nastavení pluginu
