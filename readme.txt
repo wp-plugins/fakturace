@@ -70,7 +70,7 @@ Stačí <a href="http://codex.wordpress.org/Debugging_in_WordPress" target="_bla
 
 Videonávod jak jednoduše prodávat ebook nebo členskou sekci na WordPressu.
 
-[youtube http://youtu.be/RY7xwEyQh-s]
+https://www.youtube.com/watch?v=RY7xwEyQh-s
 
 
 == Changelog ==
