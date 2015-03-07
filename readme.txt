@@ -64,6 +64,13 @@ Nejedná se o chybu pluginu.
 Stačí <a href="http://codex.wordpress.org/Debugging_in_WordPress" target="_blank">vypnout ladící režim</a> WordPressu, což by na webových stránkách měl být výchozí stav.
 
 
+== Videonávod ==
+
+Videonávod jak jednoduše prodávat ebook nebo členskou sekci na WordPressu.
+
+[youtube http://youtu.be/RY7xwEyQh-s]
+
+
 == Changelog ==
 
 = 1.0 =
