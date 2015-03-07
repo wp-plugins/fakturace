@@ -19,6 +19,8 @@ Fakturace a online platební brána s aktivací prémiových účtů
 
 Plugin je prozatím určen pro ČR
 
+Podívejte se na návod na záložce <a href="/plugins/fakturace/other_notes/">Other Notes</a>.
+
 
 == Installation ==
 1. nainstalovat plugin
