@@ -28,7 +28,13 @@ Plugin je prozatím určen pro ČR
 5. předat pracovníkům firmy GoPay notifikační URL, které naleznete v nastavení pluginu pod záložkou **GoPay**
 
 Pro správnou funkčnost je vyžadována instalace pluginu <a href="https://wordpress.org/plugins/titan-framework/">Titan Framework</a>.
+
 Pro vytvoření nové uživatelské role doporučuji třeba plugin <a href="https://wordpress.org/plugins/members/">Members</a>.
+
+**Při odinstalování pluginu Fakturace budou smazány všechny faktury a nastavení.**
+
+Zálohujte svá data. Plugin je poskytován tak, jak je. Jeho funkčnost je ověřena, každopádně zodpovědnost za svá data máte Vy sami.
+Pro zálohování doporučuji například zdarma dostupný plugin <a href="https://wordpress.org/plugins/backwpup/">BackWPup Free</a>, který sám rád používám.
 
 
 == Screenshots ==
@@ -100,3 +106,7 @@ Stačí <a href="http://codex.wordpress.org/Debugging_in_WordPress" target="_bla
 = 1.2.6 =
 
 * upraveny informace v nastavení pluginu
+
+= 1.2.7 =
+
+* při odinstalování plugin smaže všechna svá nastavení a faktury (zálohujte data)

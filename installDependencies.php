@@ -39,6 +39,11 @@ function fakturace_required_plugins() {
             'slug'      => 'members',
             'required'  => false,
         ),
+        array(
+            'name'      => 'BackWPup Free',
+            'slug'      => 'backwpup',
+            'required'  => false,
+        ),
 
     );
 
