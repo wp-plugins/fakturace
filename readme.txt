@@ -19,7 +19,11 @@ Fakturace a online platební brána s aktivací prémiových účtů
 
 Plugin je prozatím určen pro ČR
 
-Podívejte se na návod na záložce <a href="/plugins/fakturace/other_notes/">Other Notes</a>.
+
+Videonávod jak jednoduše prodávat ebook nebo členskou sekci na WordPressu.
+
+https://www.youtube.com/watch?v=RY7xwEyQh-s
+
 
 
 == Installation ==
@@ -37,6 +41,8 @@ Pro vytvoření nové uživatelské role doporučuji třeba plugin <a href="http
 
 Zálohujte svá data. Plugin je poskytován tak, jak je. Jeho funkčnost je ověřena, každopádně zodpovědnost za svá data máte Vy sami.
 Pro zálohování doporučuji například zdarma dostupný plugin <a href="https://wordpress.org/plugins/backwpup/">BackWPup Free</a>, který sám rád používám.
+
+Na záložce <a href="/plugins/fakturace/">Description</a> je videonávod s instalací.
 
 
 == Screenshots ==
@@ -65,12 +71,6 @@ Nejedná se o chybu pluginu.
 
 Stačí <a href="http://codex.wordpress.org/Debugging_in_WordPress" target="_blank">vypnout ladící režim</a> WordPressu, což by na webových stránkách měl být výchozí stav.
 
-
-== Videonávod ==
-
-Videonávod jak jednoduše prodávat ebook nebo členskou sekci na WordPressu.
-
-https://www.youtube.com/watch?v=RY7xwEyQh-s
 
 
 == Changelog ==
