@@ -62,8 +62,7 @@ class Fakturace {
 
         //register an activation hook for the plugin
         register_activation_hook( __FILE__, array( &$this, 'install_fakturace' ) );
-        register_uninstall_hook( __FILE__, array( &$this, 'plugin_uninstall' ) );
-        
+
         add_action( 'tf_create_options', array( $this, 'createMyOptions' ) );
 
         //Hook up to the init action
@@ -933,17 +932,19 @@ class Fakturace {
 		return $paramValues;
 	}
 
-    function plugin_uninstall () {
-        global $wpdb;
-
-        $wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}mw_faktury" );
-
-        delete_option( 'mw-fakturace_options' );
-        delete_option( 'mw_fakturace_db_version' );
-    }
-
 } // end class
 
 new Fakturace();
+
+function fakturace_uninstall () {
+    global $wpdb;
+
+    $wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}mw_faktury" );
+
+    delete_option( 'mw-fakturace_options' );
+    delete_option( 'mw_fakturace_db_version' );
+}
+
+register_uninstall_hook( __FILE__, 'fakturace_uninstall' );
 
 ?>
