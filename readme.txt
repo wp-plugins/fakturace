@@ -110,3 +110,7 @@ Stačí <a href="http://codex.wordpress.org/Debugging_in_WordPress" target="_bla
 = 1.2.7 =
 
 * při odinstalování plugin smaže všechna svá nastavení a faktury (zálohujte data)
+
+= 1.2.8 =
+
+* úpravy doporučených pluginů

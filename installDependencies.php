@@ -40,6 +40,11 @@ function fakturace_required_plugins() {
             'required'  => false,
         ),
         array(
+            'name'      => 'Nav Menu Roles',
+            'slug'      => 'nav-menu-roles',
+            'required'  => false,
+        ),
+        array(
             'name'      => 'BackWPup Free',
             'slug'      => 'backwpup',
             'required'  => false,
