@@ -22,7 +22,7 @@ Plugin je prozatím určen pro ČR
 
 Videonávod jak jednoduše prodávat ebook nebo členskou sekci na WordPressu.
 
-https://www.youtube.com/watch?v=RY7xwEyQh-s
+https://www.youtube.com/watch?v=RY7xwEyQh-s&vq=auto
 
 
 
@@ -45,11 +45,13 @@ Pro zálohování doporučuji například zdarma dostupný plugin <a href="https
 Na záložce <a href="/plugins/fakturace/">Description</a> je videonávod s instalací.
 
 
+
 == Screenshots ==
 
 1. Seznam vystavených faktur
 2. Nastavení pluginu
 3. Ukázka platebního formuláře
+
 
 
 == Frequently Asked Questions ==
@@ -66,10 +68,14 @@ Tím dochází k duplikaci kódu, což je chyba.
 Zkuste na serveru vyhledat, který plugin obsahuje soubor `class-titan-framework.php`.
 Samozřejmě mimo adresáře `titan-framework`, což je přímo adresář **Titan frameworku**.
 
-Pokud se Vám zobrazují zprávy **Warning:** a v cestě souboru je **/nette/**, jsou to pouze upozornění na to, co by se mělo v externí knihovně **Nette** doladit.
-Nejedná se o chybu pluginu.
+Pokud se Vám zobrazují zprávy **Warning:** a v cestě souboru je **/nette/**, aktualizujte plugin Fakturace alespoň na verzi 1.2.9.
 
-Stačí <a href="http://codex.wordpress.org/Debugging_in_WordPress" target="_blank">vypnout ladící režim</a> WordPressu, což by na webových stránkách měl být výchozí stav.
+
+
+== Upgrade Notice ==
+
+= 1.2.9 =
+Opraveny závislosti Nette frameworku, takže zmizela upozornění při zapnutém ladícím režimu WordPressu.
 
 
 
@@ -123,3 +129,7 @@ Stačí <a href="http://codex.wordpress.org/Debugging_in_WordPress" target="_bla
 = 1.2.8 =
 
 * úpravy doporučených pluginů
+
+= 1.2.9 =
+
+* doladění knihovny Nette frameworku
