@@ -68,7 +68,7 @@ Tím dochází k duplikaci kódu, což je chyba.
 Zkuste na serveru vyhledat, který plugin obsahuje soubor `class-titan-framework.php`.
 Samozřejmě mimo adresáře `titan-framework`, což je přímo adresář **Titan frameworku**.
 
-Pokud se Vám zobrazují zprávy **Warning:** a v cestě souboru je **/nette/**, aktualizujte plugin Fakturace alespoň na verzi 1.2.9.
+Pokud se Vám zobrazují zprávy **Warning:** a v cestě souboru je **/nette/**, aktualizujte plugin Fakturace alespoň na verzi 1.2.10.
 
 
 
