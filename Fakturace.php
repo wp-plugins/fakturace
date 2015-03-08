@@ -3,7 +3,7 @@
 Plugin Name: Fakturace
 Plugin URI: http://jancejka.cz/plugin-fakturace-pro-wordpress/
 Description: Vystavování faktur, platby přes GoPay, následná aktivace účtů a přiřazování uživatelských rolí.
-Version: 1.2.10
+Version: 1.2.11
 Author: Jan Čejka
 Author URI: http://jancejka.cz
 Author Email: posta@jancejka.cz

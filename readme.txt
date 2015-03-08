@@ -74,7 +74,7 @@ Pokud se Vám zobrazují zprávy **Warning:** a v cestě souboru je **/nette/**,
 
 == Upgrade Notice ==
 
-= 1.2.10 =
+= 1.2.11 =
 Opraveny závislosti Nette frameworku, takže zmizela upozornění při zapnutém ladícím režimu WordPressu.
 
 
@@ -138,4 +138,6 @@ Opraveny závislosti Nette frameworku, takže zmizela upozornění při zapnuté
 
 * doladění knihovny Nette frameworku č. 2
 
+= 1.2.11 =
 
+* naplacano trihlave oblude SVN a domluveno, aby konecne do repozitare pridala nove soubory a opravena verze se dostala az k vam
