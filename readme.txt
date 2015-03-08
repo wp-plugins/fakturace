@@ -141,3 +141,7 @@ Opraveny závislosti Nette frameworku, takže zmizela upozornění při zapnuté
 = 1.2.11 =
 
 * naplacano trihlave oblude SVN a domluveno, aby konecne do repozitare pridala nove soubory a opravena verze se dostala az k vam
+
+= 1.2.12 =
+
+* opraveny části kódu, které fungovaly v produkčním prostředí a v testovacím (WP_DEBUG) znemožnily komunikaci s platební bránou

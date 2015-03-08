@@ -14,7 +14,7 @@ require_once( 'includes/GoPay/api/gopay_soap.php' );
 require_once( 'includes/GoPay/api/gopay_config.php' );
 require_once( 'includes/GoPay/api/gopay_helper.php' );
 
-use SoapClient;
+use \SoapClient;
 
 class PlatbaGoPay {
 
@@ -261,14 +261,14 @@ class PlatbaGoPay {
 
     }
     
-    private function textReplace( $text, $replaces ) {
+    private static function textReplace( $text, $replaces ) {
         foreach ($replaces as $klic => $hodnota) {
                 $text = str_replace('{'.$klic.'}', $hodnota, $text);
         }
         return $text;
     }
 
-    private function sendEmail($email, $type, $replaces) {
+    private static function sendEmail($email, $type, $replaces) {
         $titan = TitanFramework::getInstance( 'mw-fakturace' );
         
         $emailText = self::textReplace($titan->getOption( 'email-template-'.$type ), $replaces);
