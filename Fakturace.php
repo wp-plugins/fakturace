@@ -3,7 +3,7 @@
 Plugin Name: Fakturace
 Plugin URI: http://jancejka.cz/plugin-fakturace-pro-wordpress/
 Description: Vystavování faktur, platby přes GoPay, následná aktivace účtů a přiřazování uživatelských rolí.
-Version: 1.2.12
+Version: 1.2.13
 Author: Jan Čejka
 Author URI: http://jancejka.cz
 Author Email: posta@jancejka.cz
@@ -63,15 +63,13 @@ class Fakturace {
         //register an activation hook for the plugin
         register_activation_hook( __FILE__, array( &$this, 'install_fakturace' ) );
 
-        add_action( 'tf_create_options', array( $this, 'createMyOptions' ) );
-
         //Hook up to the init action
         add_action( 'init', array( &$this, 'init_fakturace' ) );
         add_action( 'admin_init', array( &$this, 'admin_init' ) );
-//        add_action( 'admin_menu', array( &$this, 'add_menu') );
-        
-        add_action( 'admin_menu', array($this, 'add_menu_list_table_page' ));
-        
+        add_action( 'admin_menu', array( &$this, 'add_menu') );
+
+        add_action( 'tf_create_options', array( $this, 'createMyOptions' ) );
+
         add_filter('query_vars', array($this, 'plugin_add_trigger'));
         add_action('template_redirect', array($this, 'plugin_trigger_check'));
 
@@ -81,9 +79,10 @@ class Fakturace {
     /**
      * Menu item will allow us to load the page to display the table
      */
-    public function add_menu_list_table_page()
+    public function add_menu()
     {
-        add_menu_page( 'Seznam vystavených faktur', 'Faktury', 'manage_options', 'faktury-seznam', array($this, 'seznam_faktur') );
+        // zarazeno pod polozku "fakturace" vytvorenou Titan frameworkem
+        add_submenu_page( 'fakturace', 'Seznam vystavených faktur',   'Seznam faktur',   'manage_options', 'faktury-seznam', array($this, 'seznam_faktur') );
     }
     
     public function seznam_faktur() {
@@ -146,7 +145,9 @@ class Fakturace {
         $titan = TitanFramework::getInstance( 'mw-fakturace' );
 
         $panel = $titan->createAdminPanel( array(
-            'name' => 'Nastavení Fakturace',
+            'name' => 'Fakturace',
+//            'id' => 'fakturace',
+//            'parent' => 'fakturace'
         ) );
         
         // =====

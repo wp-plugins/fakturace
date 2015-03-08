@@ -145,3 +145,8 @@ Opraveny závislosti Nette frameworku, takže zmizela upozornění při zapnuté
 = 1.2.12 =
 
 * opraveny části kódu, které fungovaly v produkčním prostředí a v testovacím (WP_DEBUG) znemožnily komunikaci s platební bránou
+
+= 1.2.13 =
+
+* upraven odkaz na stránku nastavení (v IE občas zlobilo)
+* položky v nabídce pro nastavení a seznam faktur sdruženy do jedné nadřazené položky Fakturace
