@@ -3,6 +3,7 @@
         "latte/latte": "~2.3",
         "nette/forms": "~2.3",
         "nette/application": "~2.3",
-        "nette/deprecated": "~2.2"
+        "nette/deprecated": "~2.2",
+        "nette/nette": "~2.3"
     }
 }
