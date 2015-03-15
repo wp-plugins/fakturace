@@ -1,0 +1,32 @@
+/*
+All right reserved to: Jan Cejka <posta@jancejka.cz>, http://jancejka.cz
+*/
+/* 
+    Created on : 24.2.2015, 17:30:53
+    Author     : Merlin
+*/
+
+tr.faktura-stav-1 {
+    background-color: #E5F0F6;
+}
+
+tr.faktura-stav-2 {
+    background-color: #CAECCA;
+}
+
+tr.faktura-stav-3 {
+    background-color: #F6EFE0;
+}
+
+tr.faktura-stav-4 {
+    background-color: #F6E0E0;
+}
+
+tr.faktura-stav-5 {
+    background-color: #CAECCA;
+}
+
+tr.faktura-stav-6 {
+    background-color: #E5F0F6;
+}
+
