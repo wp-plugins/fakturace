@@ -150,3 +150,7 @@ Opraveny závislosti Nette frameworku, takže zmizela upozornění při zapnuté
 
 * upraven odkaz na stránku nastavení (v IE občas zlobilo)
 * položky v nabídce pro nastavení a seznam faktur sdruženy do jedné nadřazené položky Fakturace
+
+= 1.2.14 =
+
+* podrobnější popis položek pro číselné řady
