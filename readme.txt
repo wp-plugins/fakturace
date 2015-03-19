@@ -154,3 +154,7 @@ Opraveny závislosti Nette frameworku, takže zmizela upozornění při zapnuté
 = 1.2.14 =
 
 * podrobnější popis položek pro číselné řady
+
+= 1.2.15 =
+
+* odkaz na verzi premium
