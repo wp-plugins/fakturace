@@ -3,7 +3,7 @@
 Plugin Name: Fakturace
 Plugin URI: http://jancejka.cz/plugin-fakturace-pro-wordpress/
 Description: Vystavování faktur, platby přes GoPay, následná aktivace účtů a přiřazování uživatelských rolí.
-Version: 1.2.16
+Version: 1.2.17
 Author: Jan Čejka
 Author URI: http://jancejka.cz
 Author Email: posta@jancejka.cz
@@ -183,6 +183,21 @@ class Fakturace {
             'desc' => "<p><div style=\"float: left; margin-right: 2em\"><img src=\"" . plugins_url( 'assets/author.jpg', __FILE__ ) . "\" /></div>Jan Čejka</p><p><em>čarotvůrce - otec tří dětí, čaroděj, šaman, terapeut, fotograf, designer, malíř a webový architekt</em></p><p><a href=\"http://jancejka.cz\" target=\"_blank\">jancejka.cz</a></p><div style=\"clear: both;\"></div>"
         ) );
             
+        // -----
+
+        $tab_info->createOption( array(
+            'name' => 'Sponzor pluginu',
+            'type' => 'heading',
+        ) );
+
+        $tab_info->createOption( array(
+            'type' => 'note',
+            'desc' => "<div><a target=\"_blank\" style=\"float: right;\" href=\"http://www.affilbox.cz/?a_box=jmweajqf\"><img src=\"http://client.affilbox.cz/data/kampan/4/affilbox-160x240.gif\" width=\"160\" height=\"240\" alt=\"affilbox-160x240.gif\" /></a>"
+                . "<p><a target=\"_blank\" href=\"http://www.affilbox.cz/?a_box=jmweajqf\"><b>AffilBox</b></a> podporuje vývoj a šíření pluginu Fakturace tím, že jsem dostal celý provizní program pro své účely zdarma.</p>"
+                . "<p>Napadlo mě, že vytvořím plugin i pro affiliate podporu, ale teď nemám důvod. <b>AffiBox</b> umí všechno, co potřebuju :-)</p>"
+                . "</div>"
+        ) );
+
         // -----
         
         $tab_info->createOption( array(

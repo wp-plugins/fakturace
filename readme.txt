@@ -163,3 +163,6 @@ Opraveny závislosti Nette frameworku, takže zmizela upozornění při zapnuté
 
 * oprava odkazu
 
+= 1.2.17 =
+
+* přidána informace o sponzorovi pluginu
