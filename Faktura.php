@@ -99,6 +99,7 @@ class Faktura {
             'IC'            => $titan->getOption( 'fakt-dodavatel-ic' ),
             'DIC'           => $titan->getOption( 'fakt-dodavatel-dic' ),
             'ucet'          => $titan->getOption( 'fakt-dodavatel-ucet' ),
+            'platceDph'     => $titan->getOption( 'fakt-platce-dph' ),
         );
 
         $cena_s_dph = 0;
@@ -312,7 +313,8 @@ class Faktura {
         $template->supplierIn = $dodavatel['IC'];
         $template->supplierTin = $dodavatel['DIC'];
         $template->supplierAccountNumber = $dodavatel['ucet'];
-        
+        $template->platceDPH = isset($dodavatel['platceDPH']) ? $dodavatel['platceDPH'] : $titan->getOption( 'fakt-platce-dph' );;
+
         $template->customerName = ( !empty($odberatel['nazev'])
                 ? $odberatel['nazev'] 
                 : $odberatel['firstName'] . ' ' . $odberatel['lastName'] );

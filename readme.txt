@@ -166,3 +166,7 @@ Opraveny závislosti Nette frameworku, takže zmizela upozornění při zapnuté
 = 1.2.17 =
 
 * přidána informace o sponzorovi pluginu
+
+= 1.2.18 =
+
+* přidána volba pro neplátce DPH

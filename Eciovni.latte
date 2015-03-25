@@ -83,10 +83,17 @@
                         <td>IČ:</td>
                         <td>{$supplierIn}</td>
                     </tr>
-                    <tr n:if="$supplierTin">
-                        <td>DIČ:</td>
-                        <td>{$supplierTin}</td>
-                    </tr>
+                    {if $platceDPH}
+                        <tr n:if="$supplierTin">
+                            <td>DIČ:</td>
+                            <td>{$supplierTin}</td>
+                        </tr>
+                    {else}
+                        <tr>
+                            <td></td>
+                            <td>nejsme plátci DPH</td>
+                        </tr>
+                    {/if}
                 </table>
 
                 <table style="width: 100%; margin-bottom: 15px;" n:if="$supplierAccountNumber">
@@ -173,8 +180,10 @@
                 <td><strong>Položka</strong></td>
                 <td style="text-align: right;"><strong>Cena/jedn.</strong></td>
                 <td style="text-align: right;"><strong>Počet</strong></td>
-                <td style="text-align: right;"><strong>%DPH</strong></td>
-                <td style="text-align: right;"><strong>DPH</strong></td>
+                {if $platceDPH}
+                    <td style="text-align: right;"><strong>%DPH</strong></td>
+                    <td style="text-align: right;"><strong>DPH</strong></td>
+                {/if}
                 <td style="text-align: right;"><strong>Cena (Kč)</strong></td>
             </tr>
             {var $cena_celkem = 0}
@@ -185,8 +194,10 @@
                 <td>{$item['nazev']}</td>
                 <td style="text-align: right;">{$item['cena_s_dph']|round}</td>
                 <td style="text-align: right;">{$pocet|round}</td>
-                <td style="text-align: right;">{$item['sazba_dph']|round}</td>
-                <td style="text-align: right;">{$item['cena_s_dph']*$pocet*$item['sazba_dph']/100|round}</td>
+                {if $platceDPH}
+                    <td style="text-align: right;">{$item['sazba_dph']|round}</td>
+                    <td style="text-align: right;">{$item['cena_s_dph']*$pocet*$item['sazba_dph']/100|round}</td>
+                {/if}
                 <td style="text-align: right;">{$item['cena_s_dph']*$pocet|round}</td>
             </tr>
             {? $cena_celkem += ($item['cena_s_dph'] * $pocet) }
@@ -197,16 +208,18 @@
 
     <div style="border: 2px solid #000000; margin-bottom: 15px;">
         <table style="width: 100%;">
-            <tr>
-                <td>Celkem bez DPH (Kč):</td>
-                <td style="text-align: right;">{$cena_celkem - $dph_celkem|round}</td>
-            </tr>
-            <tr>
-                <td>DPH (Kč):</td>
-                <td style="text-align: right;">{$dph_celkem|round}</td>
-            </tr>
+            {if $platceDPH}
+                <tr>
+                    <td>Celkem bez DPH (Kč):</td>
+                    <td style="text-align: right;">{$cena_celkem - $dph_celkem|round}</td>
+                </tr>
+                <tr>
+                    <td>DPH (Kč):</td>
+                    <td style="text-align: right;">{$dph_celkem|round}</td>
+                </tr>
+            {/if}
             <tr style="font-size: 20px;">
-                <td><strong>Cena celkem s DPH (Kč):</strong></td>
+                <td><strong>Cena celkem {if $platceDPH}s DPH {/if}(Kč):</strong></td>
                 <td style="text-align: right;"><strong>{$cena_celkem|round}</strong></td>
             </tr>
         </table>

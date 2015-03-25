@@ -3,7 +3,7 @@
 Plugin Name: Fakturace
 Plugin URI: http://jancejka.cz/plugin-fakturace-pro-wordpress/
 Description: Vystavování faktur, platby přes GoPay, následná aktivace účtů a přiřazování uživatelských rolí.
-Version: 1.2.17
+Version: 1.2.18
 Author: Jan Čejka
 Author URI: http://jancejka.cz
 Author Email: posta@jancejka.cz
@@ -521,6 +521,14 @@ class Fakturace {
             'id' => 'fakt-dodavatel-ucet',
             'type' => 'text',
             'desc' => 'Číslo účtu i s lomítkem a číselným kódem banky'
+        ) );
+
+        $tab_faktury->createOption( array(
+            'name' => 'Jsem plátce DPH',
+            'id' => 'fakt-platce-dph',
+            'type' => 'checkbox',
+            'default' => true,
+            'desc' => 'Ano'
         ) );
 
         // -----
