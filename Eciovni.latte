@@ -116,10 +116,12 @@
                         <td>Datum splatnosti:</td>
                         <td style="text-align: center;">{$expirationDate|date:'j.n.Y'}</td>
                     </tr>
+                    {if $platceDPH}
                     <tr n:if="$dateOfVatRevenueRecognition">
                         <td>Datum uskutečnění zdanitelného plnění:</td>
                         <td style="text-align: center;">{$dateOfVatRevenueRecognition|date:'j.n.Y'}</td>
                     </tr>
+                    {/if}
                 </table>
             </td>
             <td width="60%" align="right">

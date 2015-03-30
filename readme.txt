@@ -77,6 +77,9 @@ Pokud se Vám zobrazují zprávy **Warning:** a v cestě souboru je **/nette/**,
 = 1.2.11 =
 Opraveny závislosti Nette frameworku, takže zmizela upozornění při zapnutém ladícím režimu WordPressu.
 
+= 1.2.19 =
+Upraven formát faktury podle právních předpisů
+
 
 
 == Changelog ==
@@ -170,3 +173,8 @@ Opraveny závislosti Nette frameworku, takže zmizela upozornění při zapnuté
 = 1.2.18 =
 
 * přidána volba pro neplátce DPH
+
+= 1.2.19 =
+
+* upraven formát faktury podle právních předpisů
+* upraven formát data a času v seznamu faktur

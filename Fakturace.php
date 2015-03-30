@@ -3,7 +3,7 @@
 Plugin Name: Fakturace
 Plugin URI: http://jancejka.cz/plugin-fakturace-pro-wordpress/
 Description: Vystavování faktur, platby přes GoPay, následná aktivace účtů a přiřazování uživatelských rolí.
-Version: 1.2.18
+Version: 1.2.19
 Author: Jan Čejka
 Author URI: http://jancejka.cz
 Author Email: posta@jancejka.cz
@@ -115,10 +115,12 @@ class Fakturace {
                         $radek = 0;
                         foreach ($faktury as $faktura) {
                             $row_class = (($radek++ % 2) == 1 ? ' alternate' : '');
+                            $vystaveno = new DateTime( $faktura->vystaveno );
+                            $vystaveno->setTimezone( new DateTimeZone( 'Europe/Prague' ) );
                             echo("<tr id=\"faktura-{$faktura->id}\" class=\"faktura-stav-{$faktura->stav}{$row_class}\">");
                             echo("<td>{$faktura->cislo}</td>");
                             echo("<td>{$faktura->uzivatel_email}</td>");
-                            echo("<td>{$faktura->vystaveno}</td>");
+                            echo("<td>{$vystaveno->format('d.m.Y H:i:s')}</td>");
                             echo("<td>{$faktura->cena_s_dph} Kč</td>");
                             echo("<td>{$stavy[$faktura->stav]}</td>");
                             echo("<td><a href=\"{$getPdfUrl}?akce_fakturace=getpdf&id={$faktura->id}&key={$this->fakturaModel->getKeyByID($faktura->id)}\" target=\"_blank\">PDF</a></td>");
@@ -168,7 +170,6 @@ class Fakturace {
             'type' => 'note',
             'desc' => "<p><a href=\"http://jancejka.cz/plugin-fakturace-premium/\" target=\"_blank\" style=\"float: right;\" class=\"button button-primary\">Fakturace PREMIUM</a>Generovat a zasílat <b>faktury</b> emailem, umožnit <b>online platby</b> přes GoPay a následně <b>aktivovat uživatelské účty</b> a nastavit jim vybranou uživatelskou roli.</p>"
             . "<p>V základní verzi umí plugin obsluhovat jeden formulář s jedním produktem. Pokud potřebujete víc, <b>přečtěte si o rozšířené verzi <a href=\"http://jancejka.cz/plugin-fakturace-premium/\" target=\"_blank\">Fakturace PREMIUM</a></b>.<p>"
-            . "<p>Do <b style=\"color: green; font-size: 120%;\">25.3.2015</b> možnost <b style=\"color: green;\">upgrade za poloviční cenu!</b></p>"
         ) );
             
         // -----
@@ -455,16 +456,16 @@ class Fakturace {
             'name' => 'Vydané faktury',
             'id' => 'fakt-rada-fv',
             'type' => 'text',
-            'default' => 'RRRR1CCCCCCC',
-            'desc' => 'Číselná řada pro faktury vydané (R = rok, C = číslo faktury, např. RRRR1CCCCCCC)'
+            'default' => 'RRRR1CCCCC',
+            'desc' => 'Číselná řada pro faktury vydané (R = rok, C = číslo faktury, např. RRRR1CCCCC)'
         ) );
 
 //        $tab_faktury->createOption( array(
 //            'name' => 'Dobropisy',
 //            'id' => 'fakt-rada-dob',
 //            'type' => 'text',
-//            'default' => 'RRRR2CCCCCCC',
-//            'desc' => 'Číselná řada pro dobropisy (R = rok, C = číslo faktury, např. RRRR2CCCCCCC)'
+//            'default' => 'RRRR2CCCCC',
+//            'desc' => 'Číselná řada pro dobropisy (R = rok, C = číslo faktury, např. RRRR2CCCCC)'
 //        ) );
 
         // -----
@@ -758,12 +759,18 @@ class Fakturace {
             
             $titan = TitanFramework::getInstance( 'mw-fakturace' );
 
+            //FIXME: hack na cenu
+            $cena = $titan->getOption( 'fakt-produkt-cena' );
+            if( time() >= 1427666400 )
+                $cena = 1960;
+            //--------
+
             // ulozit data atd. 
             $faktura = $this->fakturaModel->vytvorFakturu(
                     array(
                         array(
                             'nazev'         => $titan->getOption( 'fakt-produkt-nazev' ),
-                            'cena_s_dph'    => $titan->getOption( 'fakt-produkt-cena' ),
+                            'cena_s_dph'    => $cena,
                             'sazba_dph'     => $titan->getOption( 'fakt-produkt-dph' ),
                             'pocet'         => 1
                         )

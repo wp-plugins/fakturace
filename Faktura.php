@@ -313,7 +313,7 @@ class Faktura {
         $template->supplierIn = $dodavatel['IC'];
         $template->supplierTin = $dodavatel['DIC'];
         $template->supplierAccountNumber = $dodavatel['ucet'];
-        $template->platceDPH = isset($dodavatel['platceDPH']) ? $dodavatel['platceDPH'] : $titan->getOption( 'fakt-platce-dph' );;
+        $template->platceDPH = isset($dodavatel['platceDPH']) ? $dodavatel['platceDPH'] : $titan->getOption( 'fakt-platce-dph' );
 
         $template->customerName = ( !empty($odberatel['nazev'])
                 ? $odberatel['nazev'] 
