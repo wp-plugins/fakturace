@@ -3,7 +3,7 @@
 Plugin Name: Fakturace
 Plugin URI: http://jancejka.cz/plugin-fakturace-pro-wordpress/
 Description: Vystavování faktur, platby přes GoPay, následná aktivace účtů a přiřazování uživatelských rolí.
-Version: 1.2.19
+Version: 1.2.20
 Author: Jan Čejka
 Author URI: http://jancejka.cz
 Author Email: posta@jancejka.cz
@@ -759,18 +759,12 @@ class Fakturace {
             
             $titan = TitanFramework::getInstance( 'mw-fakturace' );
 
-            //FIXME: hack na cenu
-            $cena = $titan->getOption( 'fakt-produkt-cena' );
-            if( time() >= 1427666400 )
-                $cena = 1960;
-            //--------
-
-            // ulozit data atd. 
+            // ulozit data atd.
             $faktura = $this->fakturaModel->vytvorFakturu(
                     array(
                         array(
                             'nazev'         => $titan->getOption( 'fakt-produkt-nazev' ),
-                            'cena_s_dph'    => $cena,
+                            'cena_s_dph'    => $titan->getOption( 'fakt-produkt-cena' ),
                             'sazba_dph'     => $titan->getOption( 'fakt-produkt-dph' ),
                             'pocet'         => 1
                         )

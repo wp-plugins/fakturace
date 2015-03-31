@@ -80,6 +80,9 @@ Opraveny závislosti Nette frameworku, takže zmizela upozornění při zapnuté
 = 1.2.19 =
 Upraven formát faktury podle právních předpisů
 
+= 1.2.20 =
+
+Opraven problem s cenou produktu
 
 
 == Changelog ==
@@ -178,3 +181,7 @@ Upraven formát faktury podle právních předpisů
 
 * upraven formát faktury podle právních předpisů
 * upraven formát data a času v seznamu faktur
+
+= 1.2.20 =
+
+* opraven problem s cenou produktu
